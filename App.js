@@ -22,15 +22,11 @@ export default function App() {
 
           if (route.name === 'Home') {
             iconName = focused
-              ? 'home'
-              : 'home-outline';
+              ? 'images'
+              : 'images-outline';
           }else if (route.name === 'Live Scan') {
             iconName = focused ? 'camera' : 'camera-outline';
-          } else if (route.name === 'Reward') {
-            iconName = focused ? 'medal' : 'medal-outline';
-          } else if (route.name === 'History') {
-            iconName = focused ? 'timer' : 'timer-outline';
-          }
+          } 
 
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -40,8 +36,6 @@ export default function App() {
       })}>
         <Tab.Screen name='Home' component={StackScreen}/>
         <Tab.Screen name='Live Scan' component={SnapPicture}/>
-        <Tab.Screen name='Reward' component={Reward}/>
-        <Tab.Screen name='History' component={History}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

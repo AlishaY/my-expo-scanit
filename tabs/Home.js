@@ -14,6 +14,8 @@ import * as jpeg from 'jpeg-js';
 import ScanScreen from '../ScanScreen';
 
 // import Translator, { TranslatorProvider, useTranslator } from 'react-native-translator';
+import Translator from 'react-native-translator';
+import { TextInput } from 'react-native-gesture-handler';
 
 class Home extends React.Component {
     state = {
@@ -139,11 +141,11 @@ class Home extends React.Component {
             predictions.map(p => this.renderPrediction(p))}
         </View>
 
-        <View style={styles.bottom}>
+        {/* <View style={styles.bottom}>
           <Button style={styles.text} title='SAVE THIS IMAGE' ></Button>
-        </View>
+        </View> */}
 
-        <Button title='LIVE Scan Now' onPress={() => this.props.navigation.navigate('ScanScreen')}></Button>
+        {/* <Button title='LIVE Scan Now' onPress={() => this.props.navigation.navigate('ScanScreen')}></Button> */}
 
       </View>
     )
